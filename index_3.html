@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My first sub-window</title>
+	<style type="text/css">
+		.iframe-class {
+    		width: 50%;
+    		height: 50%;
+    		border: 3px solid black;
+    		overflow: auto;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>My First Sub-window</h1>
+  Click on the site you want to visit<br>
+  <input type="button" id="wiki" name="" value="Wikipedia" onclick="displayWikipedia()">
+	<input type="button" id="bing" name="" value="Bing" onclick="displayBing()">
+  <input type="button" id="github" name="" value="Github" onclick="displayGithub()">
+	<iframe id="subwindow" class="iframe-class"></iframe>
+</body>
+
+<script type="text/javascript">
+	function displayWikipedia(){
+		var subwindow = document.getElementById("subwindow");
+		subwindow.setAttribute("src", "https://www.wikipedia.org/");
+	}
+  function displayBing(){
+		var subwindow = document.getElementById("subwindow");
+		subwindow.setAttribute("src", "https://www.bing.com/");
+	}
+  function displayGithub(){
+		var subwindow = document.getElementById("subwindow");
+		subwindow.setAttribute("src", "https://github.com/");
+	}
+</script>
+</html>
