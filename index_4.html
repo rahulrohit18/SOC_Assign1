@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My first sub-window</title>
+	<style type="text/css">
+		.iframe-class {
+    		width: 500px;
+    		height: 500px;
+    		border: 3px solid black;
+    		overflow: auto;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>My First Sub-window</h1>
+	<form>
+		Enter URL here: <input type="text" id="url" name="">
+		<input type="button" id="go" name="" value="Go" onclick="displayWebpage()"><br>
+	</form>
+	<iframe id="subwindow" class="iframe-class"></iframe>
+</body>
+
+<script type="text/javascript">
+	function displayWebpage(){
+		var url = document.getElementById("url").value;
+		var subwindow = document.getElementById("subwindow");
+		subwindow.setAttribute("src", url);
+	}
+</script>
+</html>
